@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Pruebas en Windows
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Instalar módulos (PowerShell 7)
+        shell: pwsh
+        run: |
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+          Install-Module Pester -MinimumVersion 5.5.0 -Force -SkipPublisherCheck -Scope CurrentUser
+          Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
+
+      - name: Instalar módulos (Windows PowerShell 5.1)
+        shell: powershell
+        run: |
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+          Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force -Scope CurrentUser
+          Install-Module Pester -MinimumVersion 5.5.0 -Force -SkipPublisherCheck -Scope CurrentUser
+
+      - name: PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          $results = Invoke-ScriptAnalyzer -Path . -Recurse -Settings ./PSScriptAnalyzerSettings.psd1
+          $results | Format-Table -AutoSize | Out-String -Width 220 | Write-Host
+          $errors = @($results | Where-Object { $_.Severity -eq 'Error' })
+          if ($errors.Count -gt 0) {
+              throw "PSScriptAnalyzer encontró $($errors.Count) error(es)."
+          }
+
+      - name: Pester (PowerShell 7)
+        shell: pwsh
+        run: Invoke-Pester ./tests -CI -Output Detailed
+
+      - name: Pester (Windows PowerShell 5.1)
+        shell: powershell
+        run: Invoke-Pester ./tests -CI -Output Detailed
+
+      - name: Ejecución real (PowerShell 7)
+        shell: pwsh
+        run: |
+          ./Invoke-HealthCheck.ps1 -Install -Quick -OutputPath ./salida/pwsh
+          exit 0
+
+      - name: Ejecución real (Windows PowerShell 5.1)
+        shell: powershell
+        run: |
+          ./Invoke-HealthCheck.ps1 -Install -Quick -OutputPath ./salida/winps
+          exit 0
+
+      - name: Publicar informes
+        uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: informes
+          path: salida/
+          if-no-files-found: ignore

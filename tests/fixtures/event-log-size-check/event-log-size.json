@@ -1,0 +1,11 @@
+{
+  "Equipo": "PC-DEMO",
+  "Fecha": "2026-01-01T12:00:00",
+  "DiasMinimos": 7,
+  "Resumen": { "OK": 1, "Aviso": 1, "Alta": 1 },
+  "Hallazgos": [
+    { "Comprobacion": "Registro: Security", "Estado": "OK", "Detalle": "Cubre 30 días de historia.", "Valor": "64 MB de 64 MB", "Recomendado": "64 MB", "Solucion": "" },
+    { "Comprobacion": "Registro: System", "Estado": "Aviso", "Detalle": "Solo guarda 3 días de historia.", "Valor": "32 MB de 128 MB", "Recomendado": "128 MB", "Solucion": "wevtutil sl System /ms:134217728" },
+    { "Comprobacion": "Registro de bloques de PowerShell", "Estado": "Alta", "Detalle": "ScriptBlockLogging no está activo.", "Valor": "No activado", "Recomendado": "EnableScriptBlockLogging = 1", "Solucion": "New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging' -Name EnableScriptBlockLogging -Value 1" }
+  ]
+}

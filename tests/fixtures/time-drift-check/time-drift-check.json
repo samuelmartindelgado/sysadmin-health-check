@@ -1,0 +1,12 @@
+{
+  "Equipo": "PC-DEMO",
+  "Fecha": "2026-01-01T12:00:00",
+  "Resumen": { "OK": 3, "Aviso": 1, "Alta": 1, "Total": 5 },
+  "Hallazgos": [
+    { "Comprobacion": "Servicio de hora", "Estado": "OK", "Detalle": "w32time en ejecución.", "Valor": "Running", "Recomendado": "", "Solucion": "" },
+    { "Comprobacion": "Fuente de hora", "Estado": "OK", "Detalle": "Usa un servidor NTP.", "Valor": "time.windows.com", "Recomendado": "", "Solucion": "" },
+    { "Comprobacion": "Desfase de hora", "Estado": "Aviso", "Detalle": "Desfase de 10 segundos.", "Valor": "10 s", "Recomendado": "< 2 s", "Solucion": "w32tm /resync" },
+    { "Comprobacion": "Zona horaria", "Estado": "Alta", "Detalle": "Zona horaria incorrecta.", "Valor": "UTC", "Recomendado": "Europe/Madrid", "Solucion": "Set-TimeZone" },
+    { "Comprobacion": "Última sincronización", "Estado": "OK", "Detalle": "Sincronizado hoy.", "Valor": "2026-01-01", "Recomendado": "", "Solucion": "" }
+  ]
+}

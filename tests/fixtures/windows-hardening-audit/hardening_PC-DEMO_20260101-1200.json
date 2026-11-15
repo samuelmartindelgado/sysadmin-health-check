@@ -1,0 +1,16 @@
+{
+  "Meta": {
+    "Equipo": "PC-DEMO",
+    "Sistema": "Windows 11 Pro",
+    "Tipo": "PC",
+    "Admin": "No",
+    "Fecha": "2026-01-01 12:00",
+    "Puntuacion": 70
+  },
+  "Resultados": [
+    { "Id": "RED-01", "Categoria": "Red", "Nombre": "SMBv1 desactivado", "Estado": "OK", "Severidad": "Alta", "Detalle": "SMBv1 está desactivado.", "Recomendacion": "Mantener desactivado." },
+    { "Id": "RED-03", "Categoria": "Red", "Nombre": "LLMNR desactivado", "Estado": "AVISO", "Severidad": "Media", "Detalle": "LLMNR está habilitado.", "Recomendacion": "Desactivar LLMNR." },
+    { "Id": "SIS-01", "Categoria": "Sistema", "Nombre": "UAC activado", "Estado": "FALLO", "Severidad": "Alta", "Detalle": "UAC está desactivado.", "Recomendacion": "Activar UAC." },
+    { "Id": "SIS-06", "Categoria": "Sistema", "Nombre": "PowerShell 2.0 desinstalado", "Estado": "NO_COMPROBADO", "Severidad": "Media", "Detalle": "Requiere administrador.", "Recomendacion": "Ejecutar como administrador." }
+  ]
+}

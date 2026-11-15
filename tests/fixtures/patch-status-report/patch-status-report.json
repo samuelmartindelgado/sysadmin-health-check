@@ -1,0 +1,11 @@
+{
+  "Equipo": "PC-DEMO",
+  "Fecha": "2026-01-01T12:00:00",
+  "Resumen": { "OK": 2, "Aviso": 1, "Alta": 1 },
+  "Hallazgos": [
+    { "Comprobacion": "Último parche", "Estado": "OK", "Detalle": "Parcheado hace 10 días.", "Valor": "2025-12-22", "Recomendado": "", "Solucion": "" },
+    { "Comprobacion": "Reinicio pendiente", "Estado": "Aviso", "Detalle": "Hay un reinicio pendiente.", "Valor": "RebootRequired", "Recomendado": "Reiniciar", "Solucion": "Restart-Computer" },
+    { "Comprobacion": "Actualizaciones pendientes", "Estado": "Alta", "Detalle": "Hay una actualización crítica pendiente.", "Valor": "KB999999", "Recomendado": "Instalar", "Solucion": "Instalar KB999999" },
+    { "Comprobacion": "Servicio de actualizaciones", "Estado": "OK", "Detalle": "wuauserv en ejecución.", "Valor": "Running", "Recomendado": "", "Solucion": "" }
+  ]
+}

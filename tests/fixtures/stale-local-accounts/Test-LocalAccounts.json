@@ -1,0 +1,14 @@
+{
+  "Equipo": "PC-DEMO",
+  "Fecha": "2026-01-01 12:00:00",
+  "LimiteDiasSinUso": 90,
+  "SoloLectura": true,
+  "Notas": [],
+  "Resumen": { "OK": 2, "Aviso": 1, "Alta": 0 },
+  "Hallazgos": [
+    { "Comprobacion": "Cuentas sin contraseña", "Estado": "OK", "Detalle": "No hay cuentas habilitadas sin contraseña.", "Valor": "", "Recomendado": "", "Solucion": "" },
+    { "Comprobacion": "Cuenta de invitado", "Estado": "OK", "Detalle": "Invitado deshabilitado.", "Valor": "", "Recomendado": "", "Solucion": "" },
+    { "Comprobacion": "Cuentas olvidadas", "Estado": "Aviso", "Detalle": "La cuenta 'demo' lleva 120 días sin usarse.", "Valor": "120 días", "Recomendado": "Deshabilitar o borrar", "Solucion": "Disable-LocalUser demo" }
+  ],
+  "Cuentas": []
+}

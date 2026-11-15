@@ -1,0 +1,4 @@
+[
+  { "Categoria": "Servicio", "Severidad": "Alta", "Nombre": "Servicio de ejemplo", "Ruta": "C:\\Program Files\\Demo\\svc.exe", "Detalle": "El servicio se puede modificar por usuarios sin privilegios.", "Solucion": "Revisar los permisos del binario." },
+  { "Categoria": "PATH", "Severidad": "Media", "Nombre": "Ruta del PATH escribible", "Ruta": "C:\\tools", "Detalle": "Una carpeta del PATH es escribible.", "Solucion": "Quitar la carpeta del PATH o restringir permisos." }
+]

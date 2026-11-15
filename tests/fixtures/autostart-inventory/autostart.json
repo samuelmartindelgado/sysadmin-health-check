@@ -1,0 +1,4 @@
+[
+  { "Origen": "Claves de registro", "Ubicacion": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", "Nombre": "DemoApp", "Comando": "C:\\Users\\demo\\demo.exe", "Ejecutable": "C:\\Users\\demo\\demo.exe", "Firma": "Sin firmar", "Firmante": "", "Marcas": "Sin firmar" },
+  { "Origen": "Tareas programadas", "Ubicacion": "\\Demo\\tarea", "Nombre": "TareaDemo", "Comando": "powershell.exe -EncodedCommand ...", "Ejecutable": "powershell.exe", "Firma": "Firmado", "Firmante": "Microsoft Windows", "Marcas": "Comando codificado" }
+]

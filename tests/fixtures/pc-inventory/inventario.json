@@ -1,0 +1,14 @@
+{
+  "Resumen": {
+    "Equipo": "PC-DEMO",
+    "Fabricante": "Demo Systems",
+    "Modelo": "DemoBook Pro 15",
+    "SO": "Windows 11 Pro",
+    "RAMGB": 6,
+    "CPU": "Demo CPU",
+    "NumeroSerie": "DEMO123"
+  },
+  "Avisos": [
+    { "Comprobacion": "Memoria RAM", "Estado": "Aviso", "Detalle": "El equipo tiene menos de 8 GB de RAM.", "Valor": "6 GB", "Recomendado": "8 GB o más", "Solucion": "Ampliar la memoria." }
+  ]
+}

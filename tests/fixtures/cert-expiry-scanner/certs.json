@@ -1,0 +1,6 @@
+[
+  { "Almacen": "My", "Asunto": "CN=portal.demo.local", "Emisor": "CN=CA Demo", "Caduca": "2026-06-01 10:00:00", "DiasRestantes": 15, "Estado": "Aviso", "Huella": "AA11", "UsadoPor": "IIS" },
+  { "Almacen": "Remote Desktop", "Asunto": "CN=rdp.demo.local", "Emisor": "CN=CA Demo", "Caduca": "2026-01-05 10:00:00", "DiasRestantes": 3, "Estado": "Critico", "Huella": "BB22", "UsadoPor": "Escritorio remoto" },
+  { "Almacen": "My", "Asunto": "CN=expired.demo.local", "Emisor": "CN=CA Demo", "Caduca": "2025-12-01 10:00:00", "DiasRestantes": -40, "Estado": "Caducado", "Huella": "CC33", "UsadoPor": "" },
+  { "Almacen": "WebHosting", "Asunto": "CN=ok.demo.local", "Emisor": "CN=CA Demo", "Caduca": "2027-01-01 10:00:00", "DiasRestantes": 400, "Estado": "OK", "Huella": "DD44", "UsadoPor": "" }
+]
